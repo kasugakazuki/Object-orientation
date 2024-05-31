@@ -11,10 +11,10 @@ public class Golf {
 		String strpoint;												//入力したやつ
 		int flag=1;														//有効な入力
 		
-		
+		Scanner scanner;
 		
 		do {
-			Scanner scanner=new Scanner(System.in);
+			scanner=new Scanner(System.in);
 			strpoint=scanner.nextLine();
 			
 			strpoint=strpoint.replace(" ", "").replace("　", "");		//文字列の空白を消す
@@ -43,11 +43,11 @@ public class Golf {
 				
 			}
 			
-			scanner = null;												//scannerのインスタンスにnullに代入
+			//scanner = null;												//scannerのインスタンスにnullに代入
 
 		}while(flag==0);												//flag=1　有効な入力になったらループ終わり
 		
-		
+		scanner.close();
 	}
 	
 	public void Results() {												//結果表示
